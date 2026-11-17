@@ -1,0 +1,7 @@
+.codex
+.opencode
+.git
+dist
+node_modules
+*.log
+.shots
