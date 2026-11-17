@@ -113,3 +113,36 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Embedded glass workspace (src/components/ui/adjustable-glass-dashboard.tsx)
+   The component ships sized for a full standalone viewport. When it is embedded
+   inside a section, drop that height contract and soften the room photograph so
+   the panel reads as part of the page rather than a page of its own.
+--------------------------------------------------------------------------- */
+.gw-root.gw-embed {
+  min-height: 0;
+  padding: 22px 18px;
+  border-radius: 20px;
+}
+
+.gw-root.gw-embed .gw-room {
+  opacity: 0.32;
+}
+
+/* INR amounts are wider than the USD figures the component was drawn for, so
+   give the chart's y-axis gutter a little more room. */
+.gw-root.gw-embed .gw-chart-wrap {
+  padding-left: 58px;
+}
+
+.gw-root.gw-embed .gw-chart-labels {
+  font-size: 9px;
+}
+
+@media (max-width: 700px) {
+  .gw-root.gw-embed {
+    padding: 10px 8px 14px;
+    border-radius: 16px;
+  }
+}
